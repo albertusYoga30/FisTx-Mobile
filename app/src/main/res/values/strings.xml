@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">FisTx</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <!--login-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_h1">Selamat Datang Kembali</string>
+    <string name="login_h2">Silahkan masuk ke akun anda:</string>
+    <string name="phone_number">No. Telepon</string>
+    <string name="password">Kata Sandi</string>
+    <string name="hint_input_phone">Masukkan No Telepon</string>
+    <string name="hint_password">Masukkan kata sandi</string>
+    <string name="text_btn_login">Masuk</string>
+    <string name="text_forgot_password">Lupa kata sandi anda?</string>
+    <string name="text_link_register">Belum punya akun? <b><font color='#377FD9'> Daftar</font></b></string>
+
+    <!--register-->
+    <string name="register_h1">Daftarkan Akun Anda!</string>
+    <string name="register_h2">Lengkapi data berikut:</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="hint_full_name">Masukan nama lengkap</string>
+    <string name="create_password">Buat Kata Sandi</string>
+    <string name="hint_create_password">Buat kata sandi</string>
+    <string name="confirm_password_textView">Konfirmasi Kata Sandi</string>
+    <string name="hint_confirm_password">Ulangi Kata sandi</string>
+    <string name="text_btn_register">Daftar</string>
+    <string name="term_and_condition_link">Dengan melakukan pendaftaran akun, maka anda bersedia mematuhi <font color='#377FD9'><b>Syarat &amp; Ketentuan</b></font></string>
+    <string name="verification_info_textView">Masukan kode verifikasi yang kami kirimkan ke <b>0858******01</b></string>
+    <string name="btn_verification_textView">Verifikasi</string>
+    <string name="resend_code_textView">Belum menerima kode?</string>
+    <string name="resend_code_text_button">Kirim Ulang</string>
+    <string name="forgot_password_textView">Masukan nomor telepon untuk mengganti kata sandi</string>
+    <string name="active_phone_number">No. Telepon Aktif</string>
+    <string name="send_text_button">Kirim</string>
+    <string name="next_process_button_text">Lanjutkan</string>
+    <string name="create_newPassword_textView">Silahkan buat kata sandi baru</string>
+</resources>

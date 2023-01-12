@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.register.RegisterFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="37dp"
+                android:src="@drawable/ic_fistx"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/register_h1_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="37dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:letterSpacing="0.02"
+                android:text="@string/register_h1"
+                android:textColor="@color/gray1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/register_h2_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:letterSpacing="0.02"
+                android:text="@string/register_h2"
+                android:textColor="@color/gray1"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_h1_textView" />
+
+            <TextView
+                android:id="@+id/full_name_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:letterSpacing="0.02"
+                android:text="@string/full_name"
+                android:textColor="@color/black3"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/register_h2_textView"
+                app:layout_constraintTop_toBottomOf="@+id/register_h2_textView" />
+
+            <EditText
+                android:id="@+id/input_full_name"
+                style="@style/backgroundInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="18dp"
+                android:hint="@string/hint_full_name"
+                android:inputType="text"
+                android:letterSpacing="0.02"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/full_name_textView"
+                app:layout_constraintTop_toBottomOf="@+id/full_name_textView" />
+
+            <TextView
+                android:id="@+id/phone_number_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:letterSpacing="0.02"
+                android:text="@string/phone_number"
+                android:textColor="@color/black3"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/input_full_name"
+                app:layout_constraintTop_toBottomOf="@+id/input_full_name" />
+
+            <EditText
+                android:id="@+id/input_phone_number"
+                style="@style/backgroundInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="18dp"
+                android:hint="@string/hint_input_phone"
+                android:inputType="phone"
+                android:letterSpacing="0.02"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/phone_number_textView"
+                app:layout_constraintTop_toBottomOf="@+id/phone_number_textView" />
+
+            <TextView
+                android:id="@+id/create_password_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/montserrat"
+                android:letterSpacing="0.02"
+                android:text="@string/create_password"
+                android:textColor="@color/black3"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/input_phone_number"
+                app:layout_constraintTop_toBottomOf="@+id/input_phone_number" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_create_password_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="18dp"
+                app:boxBackgroundMode="none"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/create_password_textView"
+                app:layout_constraintTop_toBottomOf="@+id/create_password_textView"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_create_password"
+                    style="@style/backgroundInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/hint_create_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:letterSpacing="0.02" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/confirm_password_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:fontFamily="@font/montserrat"
+                android:letterSpacing="0.02"
+                android:text="@string/confirm_password_textView"
+                android:textColor="@color/black3"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/input_create_password_layout"
+                app:layout_constraintTop_toBottomOf="@+id/input_create_password_layout" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_confirm_password_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="18dp"
+                app:boxBackgroundMode="none"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/confirm_password_textView"
+                app:layout_constraintTop_toBottomOf="@+id/confirm_password_textView"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_confirm_password"
+                    style="@style/backgroundInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/hint_confirm_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:letterSpacing="0.02" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_register"
+                style="@style/buttonInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="37dp"
+                android:letterSpacing="0.02"
+                android:text="@string/text_btn_register"
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/input_confirm_password_layout"
+                app:layout_constraintStart_toStartOf="@+id/input_confirm_password_layout"
+                app:layout_constraintTop_toBottomOf="@+id/input_confirm_password_layout" />
+
+            <TextView
+                android:id="@+id/termAndCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/montserrat"
+                android:letterSpacing="0.02"
+                android:text="@string/term_and_condition_link"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</ScrollView>
