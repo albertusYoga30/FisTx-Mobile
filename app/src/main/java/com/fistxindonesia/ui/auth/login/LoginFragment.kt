@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import com.fistxindonesia.R
 import com.fistxindonesia.databinding.FragmentLoginBinding
@@ -21,14 +22,14 @@ class LoginFragment : Fragment() {
     ): View? {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
 
-        binding.forgotPassword.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
-        }
+        requireActivity().window.statusBarColor = ContextCompat.getColor(requireContext(), R.color.primary)
 
+        binding.forgotPassword.setOnClickListener {
+//            findNavController().navigate(R.id.action_loginFragment_to_resetPasswordActivity)
+        }
         binding.linkRegister.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
         }
-
         return binding.root
     }
 

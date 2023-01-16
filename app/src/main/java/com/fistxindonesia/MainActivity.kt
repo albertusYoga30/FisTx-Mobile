@@ -1,7 +1,9 @@
 package com.fistxindonesia
 
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import com.fistxindonesia.databinding.ActivityMainBinding
 
@@ -9,6 +11,7 @@ private lateinit var binding: ActivityMainBinding
 private lateinit var navController: NavController
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)

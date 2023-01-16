@@ -42,4 +42,8 @@
     <string name="send_text_button">Kirim</string>
     <string name="next_process_button_text">Lanjutkan</string>
     <string name="create_newPassword_textView">Silahkan buat kata sandi baru</string>
+
+    <!--Dialog-->
+    <string name="dialog_register_success">Pendaftaran Berhasil</string>
+    <string name="dialog_desc_register_success">Selamat datang di FisTX Mobile</string>
 </resources>

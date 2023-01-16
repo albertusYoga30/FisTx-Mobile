@@ -9,7 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="primary">#377FD9</color>
-    <color name="statusBarColor">#33333333</color>
+    <color name="status_bar_color_white">#33333333</color>
+    <color name="status_bar_color_blue">#CC377FD9</color>
 
     <color name="gray1">#333333</color>
     <color name="gray4">#BDBDBD</color>
