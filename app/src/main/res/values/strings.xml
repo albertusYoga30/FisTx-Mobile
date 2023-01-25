@@ -46,4 +46,24 @@
     <!--Dialog-->
     <string name="dialog_register_success">Pendaftaran Berhasil</string>
     <string name="dialog_desc_register_success">Selamat datang di FisTX Mobile</string>
+    <string name="text_dialog_success">Berhasil</string>
+    <string name="text_dialog_reset_password_desc">Kata sandi telah diperbaharui.</string>
+
+    <!-- reset password fragment label    -->
+    <string name="reset_fragment1">Lupa Kata Sandi</string>
+    <string name="reset_fragment2">Verifikasi Nomor</string>
+    <string name="reset_fragment3">Buat Kata Sandi Baru</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="title_home">Beranda</string>
+    <string name="title_dashboard">Aktivitas</string>
+    <string name="title_notifications">Forum</string>
+    <string name="title_profile">Profil</string>
+    <string name="text_setting_acount">Pengaturan Akun</string>
+    <string name="personal_info_textView">Informasi Personal</string>
+    <string name="security_textView">Security</string>
+    <string name="about_textView">Tentang</string>
+    <string name="contact_textView">Hubungi Kami</string>
+    <string name="about_us_textView">Tentang FisTx Mobile</string>
+    <string name="logout_textView">Keluar</string>
 </resources>

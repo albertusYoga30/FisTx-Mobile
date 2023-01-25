@@ -60,7 +60,7 @@
 
             <TextView
                 android:id="@+id/phone_number_textView"
-                style="@style/TextStyleRegular12Gray"
+                style="@style/TextStyleRegular12Black3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -70,21 +70,20 @@
 
             <EditText
                 android:id="@+id/input_phone_number"
-                style="@style/backgroundInput"
+                style="@style/PhoneNumberInputStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
                 android:layout_marginEnd="18dp"
                 android:hint="@string/hint_input_phone"
-                android:inputType="phone"
-                android:letterSpacing="0.02"
+                android:imeOptions="actionNext"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/phone_number_textView"
                 app:layout_constraintTop_toBottomOf="@+id/phone_number_textView" />
 
             <TextView
                 android:id="@+id/create_password_textView"
-                style="@style/TextStyleRegular12Gray"
+                style="@style/TextStyleRegular12Black3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="26dp"
@@ -94,27 +93,22 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/input_create_password_layout"
+                style="@style/LayoutInputPasswordStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
                 android:layout_marginEnd="18dp"
-                app:boxBackgroundMode="none"
-                app:hintEnabled="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/create_password_textView"
-                app:layout_constraintTop_toBottomOf="@+id/create_password_textView"
-                app:passwordToggleEnabled="true">
+                app:layout_constraintTop_toBottomOf="@+id/create_password_textView">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_create_password"
-                    style="@style/backgroundInput"
+                    android:id="@+id/input_password"
+                    style="@style/PasswordInputStyle"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:hint="@string/hint_password"
-                    android:imeOptions="actionDone"
-                    android:inputType="textPassword"
-                    android:letterSpacing="0.02"
-                    android:textAllCaps="true" />
+                    android:imeOptions="actionDone" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -125,35 +119,30 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="37dp"
                 android:text="@string/text_btn_login"
+                android:textAllCaps="true"
                 app:layout_constraintEnd_toEndOf="@+id/input_create_password_layout"
                 app:layout_constraintStart_toStartOf="@+id/input_create_password_layout"
                 app:layout_constraintTop_toBottomOf="@+id/input_create_password_layout" />
 
             <TextView
                 android:id="@+id/forgot_password"
+                style="@style/TextStyleSemiBold12Blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:fontFamily="@font/montserrat_semi_bold"
-                android:letterSpacing="0.02"
                 android:text="@string/text_forgot_password"
-                android:textColor="@color/primary"
-                android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
             <TextView
                 android:id="@+id/link_register"
+                style="@style/TextStyleRegular14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="67dp"
                 android:layout_marginBottom="39dp"
-                android:fontFamily="@font/montserrat"
-                android:letterSpacing="0.02"
                 android:text="@string/text_link_register"
-                android:textColor="@color/gray1"
-                android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

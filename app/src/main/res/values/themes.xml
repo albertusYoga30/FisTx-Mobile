@@ -13,7 +13,21 @@
         <item name="android:statusBarColor">?attr/colorPrimary</item>
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:windowLightStatusBar">false</item>
-        <!-- Customize your theme here. -->
 
+        <!-- Customize your theme here. -->
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+        <item name="bottomNavigationStyle">@style/CustomBottomNavigationViewStyle</item>
+
+    </style>
+
+
+    <style name="CustomBottomNavigationViewStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="backgroundTint">@color/white</item>
+        <item name="itemIconTint">@color/bottom_nav_view_item_color</item>
+        <item name="itemTextColor">@color/bottom_nav_view_item_color</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavigationTextStyle</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationTextStyle</item>
     </style>
 </resources>

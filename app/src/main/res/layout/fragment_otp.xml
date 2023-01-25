@@ -24,17 +24,14 @@
 
         <TextView
             android:id="@+id/verification_info_textView"
+            style="@style/TextStyleRegular14"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginTop="89dp"
             android:layout_marginEnd="60dp"
-            android:fontFamily="@font/montserrat"
-            android:letterSpacing="0.02"
             android:text="@string/verification_info_textView"
             android:textAlignment="center"
-            android:textColor="@color/gray1"
-            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/verification_imageView" />
@@ -65,22 +62,74 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="33dp"
                     android:background="@drawable/bg_input_gray"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
+                    <EditText
+                        android:id="@+id/pin1"
+                        style="@style/PinTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/pin2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/pin2"
+                        style="@style/PinTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/pin3"
+                        app:layout_constraintStart_toEndOf="@+id/pin1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/pin3"
+                        style="@style/PinTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/pin4"
+                        app:layout_constraintStart_toEndOf="@+id/pin2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/pin4"
+                        style="@style/PinTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/pin5"
+                        app:layout_constraintStart_toEndOf="@+id/pin3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/pin5"
+                        style="@style/PinTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:imeOptions="actionDone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/pin4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/verification_button"
+                    android:id="@+id/btn_verification"
                     style="@style/buttonInput"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="17dp"
                     android:layout_marginBottom="24dp"
-                    android:letterSpacing="0.02"
                     android:text="@string/btn_verification_textView"
                     android:textAllCaps="true"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -94,14 +143,11 @@
 
         <TextView
             android:id="@+id/resend_code_textView"
+            style="@style/TextStyleRegular14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="46dp"
-            android:fontFamily="@font/montserrat"
-            android:letterSpacing="0.02"
             android:text="@string/resend_code_textView"
-            android:textColor="@color/gray1"
-            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@+id/verification_layout"
             app:layout_constraintStart_toStartOf="@+id/verification_layout"
             app:layout_constraintTop_toBottomOf="@+id/verification_layout" />
@@ -114,7 +160,6 @@
             android:layout_marginTop="18dp"
             android:layout_marginEnd="79dp"
             android:layout_marginBottom="69dp"
-            android:letterSpacing="0.02"
             android:text="@string/resend_code_text_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

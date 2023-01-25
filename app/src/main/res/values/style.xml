@@ -1,19 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Input Style -->
+    <style name="LayoutInputPasswordStyle" parent="Widget.Design.TextInputLayout">
+        <item name="hintEnabled">false</item>
+        <item name="boxBackgroundMode">none</item>
+        <item name="passwordToggleEnabled">true</item>
+        <item name="passwordToggleTint">@color/gray4</item>
+    </style>
 
-    <style name="backgroundInput" parent="Widget.AppCompat.EditText">
+    <style name="PasswordInputStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:inputType">textPassword</item>
+        <item name="android:background">@drawable/bg_focus_input</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/black1</item>
-        <item name="android:background">@drawable/bg_outline_gray</item>
-        <item name="android:imeOptions">actionNext</item>
-        <item name="android:inputType">text</item>
-        <item name="android:textSize">14sp</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColorHint">@color/gray4</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:paddingVertical">11dp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+    </style>
+
+    <style name="PhoneNumberInputStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:inputType">phone</item>
+        <item name="android:background">@drawable/bg_focus_input</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black1</item>
+        <item name="android:textColorHint">@color/gray4</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.02</item>
         <item name="android:fontFamily">@font/montserrat</item>
         <item name="android:paddingVertical">11dp</item>
         <item name="android:paddingHorizontal">16dp</item>
     </style>
 
+    <style name="RegularInputStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:inputType">text</item>
+        <item name="android:background">@drawable/bg_focus_input</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black1</item>
+        <item name="android:textColorHint">@color/gray4</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:paddingVertical">11dp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+    </style>
+
+    <style name="PinTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/gray1</item>
+        <item name="android:inputType">number</item>
+        <item name="android:backgroundTint">@color/gray4</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <!-- Button Style -->
     <style name="buttonInput" parent="Widget.AppCompat.Button">
         <item name="android:height">54dp</item>
         <item name="android:textColor">@android:color/white</item>
@@ -21,7 +67,7 @@
         <item name="android:gravity">center</item>
         <item name="android:letterSpacing">0.02</item>
         <item name="android:fontFamily">@font/montserrat_bold</item>
-        <item name="android:background">@drawable/bg_btn_input</item>
+        <item name="android:background">@drawable/button_input_filled</item>
     </style>
 
     <style name="buttonInputOutline" parent="Widget.AppCompat.Button">
@@ -29,22 +75,24 @@
         <item name="android:textAllCaps">false</item>
         <item name="android:textSize">14sp</item>
         <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">0.02</item>
         <item name="android:fontFamily">@font/montserrat_bold</item>
         <item name="android:background">@drawable/bg_outline_blue</item>
     </style>
 
-    <style name="ActionBarTextStyle" parent="Widget.AppCompat.TextView">
-        <item name="fontFamily">@font/montserrat_bold</item>
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">@color/black1</item>
-        <item name="android:letterSpacing">0.02</item>
-    </style>
-
-    //font style
-    <style name="TextStyleRegular12Gray" parent="Widget.AppCompat.TextView">
+    <!-- Text Style -->
+    <style name="TextStyleRegular12Black3" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/black3</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextStyleRegular12Gray4" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:textColor">@color/gray4</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
 
@@ -55,10 +103,35 @@
         <item name="android:letterSpacing">0.02</item>
     </style>
 
+    <style name="TextStyleRegular14" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray1</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
     <style name="TextStyleSemiBold12" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat_semi_bold</item>
         <item name="android:textSize">12sp</item>
+        <item name="fontWeight">600</item>
+        <item name="lineHeight">14.63dp</item>
         <item name="android:textColor">@color/gray1</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextStyleSemiBold12Red" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontWeight">600</item>
+        <item name="lineHeight">14.63dp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextStyleSemiBold12Blue" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/primary</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
 
@@ -69,15 +142,23 @@
         <item name="android:letterSpacing">0.02</item>
     </style>
 
-    <style name="TextDialogStyle" parent="Widget.AppCompat.TextView">
+    <style name="TextStyleBold18" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat_bold</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/gray1</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
 
+    <style name="TextStyleBold14" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray1</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:fontWeight">700</item>
+    </style>
 
-    // Dialog Alert Style
+
+    <!-- Dialog Style -->
     <style name="DialogBackgroundStyle" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="shapeAppearanceOverlay">@style/DialogShape</item>
     </style>
@@ -94,7 +175,36 @@
         <item name="statusBarBackground">@color/primary</item>
     </style>
 
+    <!-- Action Bar Style -->
+    <style name="ActionBarTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black1</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
 
+    <style name="ActionBarMainTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight">700</item>
+        <item name="android:lineHeight">16sp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="ActionBarStyle" parent="Widget.MaterialComponents.ActionBar.Primary">
+        <item name="background">@color/white</item>
+        <item name="statusBarBackground">@color/primary</item>
+    </style>
+
+
+    <!--Bottom navigation text Style -->
+    <style name="BottomNavigationTextStyle" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="lineHeight">16sp</item>
+    </style>
 
 
 </resources>

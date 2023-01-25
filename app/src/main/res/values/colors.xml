@@ -9,6 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="primary">#377FD9</color>
+    <color name="soft_primary">#EDF3FB</color>
+    <color name="red">#EB5757</color>
     <color name="status_bar_color_white">#33333333</color>
     <color name="status_bar_color_blue">#CC377FD9</color>
 
@@ -20,6 +22,12 @@
     <color name="black1">#303030</color>
     <color name="black2">#575656</color>
     <color name="black3">#757575</color>
+    <color name="black5">#D3D3D3</color>
 
+
+    // Custom BottomNavigationView Style
+    <color name="bottomNavBackground">@color/white</color>
+    <color name="bottomNavItemColor">@color/gray4</color>
+    <color name="bottomNavCheckedItemColor">@color/primary</color>
 
 </resources>
