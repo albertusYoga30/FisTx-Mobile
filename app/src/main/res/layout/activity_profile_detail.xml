@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileDetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layout_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_save"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/profile_example"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/choose_Photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:layout_constraintEnd_toEndOf="@+id/user_image"
+                app:layout_constraintStart_toStartOf="@+id/user_image"
+                app:layout_constraintTop_toBottomOf="@+id/user_image">
+
+                <ImageView
+                    android:id="@+id/camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_camera"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/TextStyleSemiBold12Blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/choose_photo_textView"
+                    app:layout_constraintBottom_toBottomOf="@+id/camera"
+                    app:layout_constraintStart_toEndOf="@+id/camera"
+                    app:layout_constraintTop_toTopOf="@+id/camera" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/personal_data_textView"
+                style="@style/TextStyleSemiBold12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="33dp"
+                android:text="@string/personal_data_textView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/choose_Photo" />
+
+            <TextView
+                android:id="@+id/full_name_textView"
+                style="@style/TextStyleRegular12Black3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/full_name"
+                app:layout_constraintStart_toStartOf="@+id/personal_data_textView"
+                app:layout_constraintTop_toBottomOf="@+id/personal_data_textView" />
+
+            <EditText
+                android:id="@+id/input_full_name"
+                style="@style/RegularInputStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="18dp"
+                android:hint="@string/hint_full_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/full_name_textView"
+                app:layout_constraintTop_toBottomOf="@+id/full_name_textView" />
+
+            <TextView
+                android:id="@+id/phone_number_textView"
+                style="@style/TextStyleRegular12Black3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/active_phone_number"
+                app:layout_constraintStart_toStartOf="@+id/input_full_name"
+                app:layout_constraintTop_toBottomOf="@+id/input_full_name" />
+
+            <EditText
+                android:id="@+id/input_phone_number"
+                style="@style/PhoneNumberInputStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:hint="@string/hint_input_phone"
+                app:layout_constraintEnd_toEndOf="@+id/input_full_name"
+                app:layout_constraintStart_toStartOf="@+id/input_full_name"
+                app:layout_constraintTop_toBottomOf="@+id/phone_number_textView" />
+
+            <TextView
+                android:id="@+id/email_textView"
+                style="@style/TextStyleRegular12Black3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/prompt_email"
+                app:layout_constraintStart_toStartOf="@+id/input_phone_number"
+                app:layout_constraintTop_toBottomOf="@+id/input_phone_number" />
+
+            <EditText
+                android:id="@+id/input_email"
+                style="@style/EmailInputStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:hint="@string/hint_email"
+                app:layout_constraintEnd_toEndOf="@+id/input_phone_number"
+                app:layout_constraintStart_toStartOf="@+id/input_phone_number"
+                app:layout_constraintTop_toBottomOf="@+id/email_textView" />
+
+            <TextView
+                android:id="@+id/birth_date_textView"
+                style="@style/TextStyleRegular12Black3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/birth_date_textView"
+                app:layout_constraintStart_toStartOf="@+id/input_email"
+                app:layout_constraintTop_toBottomOf="@+id/input_email" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_birth_date_layout"
+                style="@style/LayoutInputCalendarStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/birth_date_textView"
+                app:layout_constraintTop_toBottomOf="@+id/birth_date_textView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_birth_date"
+                    style="@style/DateInputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/hint_date"
+                    android:imeOptions="actionNext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/gender_textView"
+                style="@style/TextStyleRegular12Black3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/gender_textView"
+                app:layout_constraintStart_toStartOf="@+id/input_birth_date_layout"
+                app:layout_constraintTop_toBottomOf="@+id/input_birth_date_layout" />
+
+            <RadioGroup
+                android:id="@+id/layout_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/gender_man"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/gender_textView"
+                app:layout_constraintTop_toBottomOf="@+id/gender_textView">
+
+                <RadioButton
+                    android:id="@+id/gender_man"
+                    style="@style/RadioButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/primary"
+                    android:text="@string/gender_man" />
+
+                <RadioButton
+                    android:id="@+id/gender_woman"
+                    style="@style/RadioButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/primary"
+                    android:text="@string/gender_woman" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/provinsi_textView"
+                style="@style/TextStyleRegular12Black3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/provinsi_textView"
+                app:layout_constraintStart_toStartOf="@+id/layout_gender"
+                app:layout_constraintTop_toBottomOf="@+id/layout_gender" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_provinsi"
+                style="@style/LayoutInputDropDownStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/provinsi_textView"
+                app:layout_constraintTop_toBottomOf="@+id/provinsi_textView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_provinsi"
+                    style="@style/RegularInputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/hint_provinsi"
+                    android:imeOptions="actionNext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/kabupaten_textView"
+                style="@style/TextStyleRegular12Black3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/kota_kabupaten_textView"
+                app:layout_constraintStart_toStartOf="@+id/layout_provinsi"
+                app:layout_constraintTop_toBottomOf="@+id/layout_provinsi" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_kota_kabupaten"
+                style="@style/LayoutInputDropDownStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/kabupaten_textView"
+                app:layout_constraintTop_toBottomOf="@+id/kabupaten_textView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_kota_kabupaten"
+                    style="@style/RegularInputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/hint_kota_kabupaten"
+                    android:imeOptions="actionNext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/kecamatan_textView"
+                style="@style/TextStyleRegular12Black3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/kecamatan_textView"
+                app:layout_constraintStart_toStartOf="@+id/layout_kota_kabupaten"
+                app:layout_constraintTop_toBottomOf="@+id/layout_kota_kabupaten" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_kecamatan"
+                style="@style/LayoutInputDropDownStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/kecamatan_textView"
+                app:layout_constraintTop_toBottomOf="@+id/kecamatan_textView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_kecamatan"
+                    style="@style/RegularInputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/hint_kecamatan"
+                    android:imeOptions="actionNext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/kelurahan_desa_textView"
+                style="@style/TextStyleRegular12Black3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/kelurahan_desa_textView"
+                app:layout_constraintStart_toStartOf="@+id/layout_kecamatan"
+                app:layout_constraintTop_toBottomOf="@+id/layout_kecamatan" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_kelurahan_desa"
+                style="@style/LayoutInputDropDownStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/kelurahan_desa_textView"
+                app:layout_constraintTop_toBottomOf="@+id/kelurahan_desa_textView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_kelurahan_desa"
+                    style="@style/RegularInputStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/hint_kelurahan_desa"
+                    android:imeOptions="actionNext" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/address_textView"
+                style="@style/TextStyleRegular12Black3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/address_textView"
+                app:layout_constraintStart_toStartOf="@+id/layout_kelurahan_desa"
+                app:layout_constraintTop_toBottomOf="@+id/layout_kelurahan_desa" />
+
+            <EditText
+                android:id="@+id/input_address"
+                style="@style/RegularInputStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="18dp"
+                android:hint="@string/hint_address"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/address_textView"
+                app:layout_constraintTop_toBottomOf="@+id/address_textView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save"
+        style="@style/buttonInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginVertical="24dp"
+        android:text="@string/btn_save"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_scroll" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

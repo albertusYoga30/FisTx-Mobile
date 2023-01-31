@@ -1,6 +1,6 @@
 package com.fistxindonesia.data
 
-import com.fistxindonesia.data.model.LoggedInUser
+import com.fistxindonesia.data.models.LoggedInUser
 import java.io.IOException
 
 /**

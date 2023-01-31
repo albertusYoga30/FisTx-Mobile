@@ -27,5 +27,30 @@
         android:id="@+id/navigation_profile"
         android:name="com.fistxindonesia.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_profileDetailActivity"
+            app:destination="@id/profileDetailActivity" />
+        <action
+            android:id="@+id/action_navigation_profile_to_securityActivity"
+            app:destination="@id/securityActivity" />
+        <action
+            android:id="@+id/action_navigation_profile_to_contactUsActivity"
+            app:destination="@id/contactUsActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/profileDetailActivity"
+        android:name="com.fistxindonesia.ui.profile.ProfileDetailActivity"
+        android:label="activity_profile_detail"
+        tools:layout="@layout/activity_profile_detail" />
+    <activity
+        android:id="@+id/securityActivity"
+        android:name="com.fistxindonesia.ui.profile.SecurityActivity"
+        android:label="activity_security"
+        tools:layout="@layout/activity_security" />
+    <activity
+        android:id="@+id/contactUsActivity"
+        android:name="com.fistxindonesia.ui.profile.ContactUsActivity"
+        android:label="activity_contact_us"
+        tools:layout="@layout/activity_contact_us" />
 </navigation>

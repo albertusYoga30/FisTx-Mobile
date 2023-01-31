@@ -11,5 +11,9 @@ class AuthViewModel : ViewModel() {
             pin1.isNotEmpty() && pin2.isNotEmpty() && pin3.isNotEmpty() && pin4.isNotEmpty() && pin5.isNotEmpty()
     }
 
+    fun register(phone: String, password: String, retypePassword: String, ktpFile: String ){
+
+    }
+
 }
 

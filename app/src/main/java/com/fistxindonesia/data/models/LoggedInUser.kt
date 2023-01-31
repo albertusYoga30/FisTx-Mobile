@@ -1,4 +1,4 @@
-package com.fistxindonesia.data.model
+package com.fistxindonesia.data.models
 
 /**
  * Data class that captures user information for logged in users retrieved from LoginRepository

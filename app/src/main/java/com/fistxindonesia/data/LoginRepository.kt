@@ -1,6 +1,6 @@
 package com.fistxindonesia.data
 
-import com.fistxindonesia.data.model.LoggedInUser
+import com.fistxindonesia.data.models.LoggedInUser
 
 /**
  * Class that requests authentication and user information from the remote data source and

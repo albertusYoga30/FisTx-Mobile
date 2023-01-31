@@ -1,37 +1,30 @@
 package com.fistxindonesia.ui.profile
 
 import android.os.Bundle
-import android.view.ContextMenu
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.fistxindonesia.R
-import com.fistxindonesia.databinding.FragmentProfileBinding
+import com.fistxindonesia.databinding.FragmentProfileDetailBinding
 
-class ProfileFragment : Fragment() {
+class ProfileDetailFragment : Fragment() {
 
-    private var _binding: FragmentProfileBinding? = null
+    private var _binding: FragmentProfileDetailBinding? = null
     private val binding get() = _binding!!
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+    ): View? {
+        // Inflate the layout for this fragment
+        _binding = FragmentProfileDetailBinding.inflate(inflater, container, false)
+//        actionBarSetup()
 
-        binding.personalInformation.setOnClickListener {
-            val directions = ProfileFragmentDirections.actionNavigationProfileToProfileDetailActivity()
-            findNavController().navigate(directions)
-        }
-
-        binding.security.setOnClickListener {
-            val directions = ProfileFragmentDirections.actionNavigationProfileToSecurityActivity()
-            findNavController().navigate(directions)
-        }
         return binding.root
+
     }
 
 //    private fun actionBarSetup() {
@@ -42,4 +35,6 @@ class ProfileFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }
+
