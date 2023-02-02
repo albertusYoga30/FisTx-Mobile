@@ -15,7 +15,6 @@ class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,8 +22,9 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
 
         binding.personalInformation.setOnClickListener {
-            val directions = ProfileFragmentDirections.actionNavigationProfileToProfileDetailActivity()
-            findNavController().navigate(directions)
+            findNavController().navigate(R.id.action_navigation_profile_to_profileDetailFragment)
+//            val directions = ProfileFragmentDirections.actionNavigationProfileToProfileDetailActivity()
+//            findNavController().navigate(directions)
         }
 
         binding.security.setOnClickListener {

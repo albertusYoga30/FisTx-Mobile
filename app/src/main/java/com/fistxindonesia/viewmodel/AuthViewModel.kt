@@ -1,19 +1,26 @@
 package com.fistxindonesia.viewmodel
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.fistxindonesia.data.network.UserService
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineScope
+import javax.inject.Inject
 
-class AuthViewModel : ViewModel() {
+@HiltViewModel
+class AuthViewModel @Inject constructor(
+    private val userService: UserService,
+    application: Application
+) : AndroidViewModel(application) {
     val isButtonEnable: MutableLiveData<Boolean> = MutableLiveData(false)
 
-    fun validatePin(pin1: String, pin2: String, pin3: String, pin4: String, pin5: String) {
-        isButtonEnable.value =
-            pin1.isNotEmpty() && pin2.isNotEmpty() && pin3.isNotEmpty() && pin4.isNotEmpty() && pin5.isNotEmpty()
-    }
+    fun register(phoneNumber: String, password: String, retypePassword: String) {
 
-    fun register(phone: String, password: String, retypePassword: String, ktpFile: String ){
 
     }
+
 
 }
 
