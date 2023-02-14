@@ -4,5 +4,6 @@ class Constants {
     companion object{
         const val IS_LOGIN = false
         const val BASE_URL = "https://api-p-fistx.xyz/"
+        const val REGISTRATION_TOKEN = "REGISTRATION_TOKEN"
     }
 }

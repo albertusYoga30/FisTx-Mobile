@@ -1,15 +1,12 @@
 package com.fistxindonesia.ui.auth.resetPassword
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowInsetsController
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.navigation.fragment.findNavController
 import com.fistxindonesia.R
@@ -31,6 +28,7 @@ class ForgotPasswordFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentForgotPasswordBinding.inflate(layoutInflater, container, false)
 
+//        activity?.setActionBar(binding.toolbar)
         statusBarSetup()
         actionBarSetup()
 
@@ -55,10 +53,10 @@ class ForgotPasswordFragment : Fragment() {
             requireActivity().window.decorView
         ).isAppearanceLightStatusBars = true
 
-//        requireActivity().window.insetsController?.setSystemBarsAppearance(
-//            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
-//            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
-//        )
+        requireActivity().window.insetsController?.setSystemBarsAppearance(
+            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
+            WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+        )
 
     }
 

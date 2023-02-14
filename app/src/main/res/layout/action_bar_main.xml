@@ -6,44 +6,38 @@
     android:layout_height="wrap_content"
     android:background="@color/primary">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/logo_imageView"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/ic_logo_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/logo_imageView"
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:src="@drawable/ic_main_white_rounded"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/label_main"
+        style="@style/ActionBarMainTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/notification_imageView"
+        app:layout_constraintStart_toEndOf="@+id/logo_imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="FisTx Mobile" />
 
-        <TextView
-            android:id="@+id/label"
-            style="@style/ActionBarMainTextStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/notification_imageView"
-            app:layout_constraintStart_toEndOf="@+id/logo_imageView"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="FisTx Mobile" />
-
-        <ImageView
-            android:id="@+id/notification_imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="22dp"
-            android:src="@drawable/ic_notification"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <ImageView
+        android:id="@+id/notification_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:src="@drawable/ic_notification"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

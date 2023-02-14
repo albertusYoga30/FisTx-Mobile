@@ -7,9 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".ui.activity.ActivityFragment" >
 
-    <include
-        android:id="@+id/action_bar"
-        layout="@layout/action_bar_main" />
+<!--    <include-->
+<!--        android:id="@+id/action_bar"-->
+<!--        layout="@layout/action_bar_main" />-->
 
     <TextView
         android:id="@+id/text_dashboard"

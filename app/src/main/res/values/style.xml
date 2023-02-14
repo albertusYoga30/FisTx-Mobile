@@ -142,7 +142,15 @@
         <item name="android:lineHeight">16dp</item>
         <item name="android:textColor">@color/gray1</item>
         <item name="android:letterSpacing">0.02</item>
-        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextStyleRegular10Gray3" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:lineHeight">16dp</item>
+        <item name="android:textColor">@color/gray3</item>
+        <item name="android:letterSpacing">0.02</item>
     </style>
 
     <style name="TextStyleRegular12Black3" parent="Widget.AppCompat.TextView">
@@ -165,6 +173,8 @@
     <style name="TextStyleRegular12Black" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat</item>
         <item name="android:textSize">12sp</item>
+        <item name="android:fontWeight">600</item>
+        <item name="android:lineHeight">14.63dp</item>
         <item name="android:textColor">@color/gray1</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
@@ -176,11 +186,47 @@
         <item name="android:letterSpacing">0.02</item>
     </style>
 
+    <style name="TextStyleRegular14gray1" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineHeight">17.07dp</item>
+        <item name="android:textFontWeight">600</item>
+        <item name="android:textColor">@color/gray1</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextStyleRegular14gray1700" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineHeight">17.07dp</item>
+        <item name="android:textFontWeight">700</item>
+        <item name="android:textColor">@color/gray1</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextStyleSemiBold10" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textSize">10sp</item>
+        <item name="fontWeight">600</item>
+        <item name="lineHeight">16dp</item>
+        <item name="android:textColor">@color/gray1</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
     <style name="TextStyleSemiBold12" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat_semi_bold</item>
         <item name="android:textSize">12sp</item>
         <item name="fontWeight">600</item>
         <item name="lineHeight">14.63dp</item>
+        <item name="android:textColor">@color/gray1</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextStyleRegular12" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontWeight">600</item>
+        <item name="lineHeight">18dp</item>
         <item name="android:textColor">@color/gray1</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
@@ -198,13 +244,13 @@
         <item name="fontFamily">@font/montserrat_semi_bold</item>
         <item name="android:textSize">12sp</item>
         <item name="android:fontWeight">600</item>
-        <item name="android:lineHeight">14.63dp</item>
         <item name="android:textColor">@color/primary</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
 
     <style name="TextStyleSemiBold18" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:fontWeight">600</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/gray1</item>
         <item name="android:letterSpacing">0.02</item>
@@ -225,6 +271,14 @@
         <item name="android:fontWeight">700</item>
     </style>
 
+    <style name="TextStyleChartLabel" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">10dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:fontWeight">500</item>
+    </style>
 
     <!-- Dialog Style -->
     <style name="DialogBackgroundStyle" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
@@ -263,6 +317,10 @@
     <style name="ActionBarStyle" parent="Widget.MaterialComponents.ActionBar.Primary">
         <item name="background">@color/white</item>
         <item name="statusBarBackground">@color/primary</item>
+    </style>
+
+    <style name="ActionBarMainStyle" parent="Widget.MaterialComponents.ActionBar.Primary">
+        <item name="background">@color/primary</item>
     </style>
 
 

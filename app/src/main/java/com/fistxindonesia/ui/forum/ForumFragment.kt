@@ -27,7 +27,7 @@ class ForumFragment : Fragment() {
     }
 
     private fun actionBarSetup() {
-        binding.actionBar.label.text = findNavController().currentDestination?.label.toString()
+//        binding.actionBar.label.text = findNavController().currentDestination?.label.toString()
     }
 
     override fun onDestroyView() {

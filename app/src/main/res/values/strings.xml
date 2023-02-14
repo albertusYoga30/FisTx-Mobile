@@ -93,4 +93,33 @@
     <string name="hint_confirm_new_password">Ulangi kata sandi baru</string>
     <string name="create_new_password_textview">Buat kata sandi baru</string>
     <string name="about_us_textview">Beri kritik dan saran atau pertanyaan anda kepada FisTx Mobile, sebagai acuan untuk perkembangan kami.</string>
+    <string name="banner_textView">Produk Unggulan Fistx</string>
+
+    <!--FisTx Services-->
+    <string name="service_textView">Layanan FisTx</string>
+    <string name="pond_profile_textview">Profil Tambak</string>
+    <string name="pond_profile_desc_textview">Informasi lahan dan kolam anda</string>
+    <string name="device_textview">Device</string>
+    <string name="device_desc_textview">Informasi device yang anda gunakan</string>
+    <string name="calculator_textview">kalkulator</string>
+    <string name="calculator_desc_textview">Alkalinitas, Ammonia, Karbon</string>
+    <string name="shrimp_price_textview">Harga Udang</string>
+    <string name="shrimp_price_desc_textview">Informasi harga udang di berbagai daerah</string>
+    <string name="summary_activity_textview">Ringkasan Aktivitas</string>
+    <string name="dummy_pond1">Kolam Udang 1</string>
+    <string name="dummy_pond_location1">Lahan Pakem</string>
+    <string name="dummy_date">September 2023</string>
+    <string name="period_textview">Periode</string>
+    <string name="pond_unavailable">Kolam tidak tersedia</string>
+    <string name="pond_location_unavailable">-</string>
+    <string name="feed_chart_textview">Grafik Pakan</string>
+    <string name="feed_standard_textview">Standar pakan FisTx</string>
+    <string name="daily_ph_chart_textview">Grafik pH Harian</string>
+    <string name="change_chart_textview">Ganti grafik</string>
+    <string name="sampling_chart_textview">Grafik Sampling</string>
+    <string name="sampling_chart_label_textview">Pengambilan ke-</string>
+    <string name="feed_chart_label_textview">Waktu</string>
+    <string name="ph_chart_label_textview">pH harian</string>
+    <string name="news_textview">Kabar dan Berita</string>
+    <string name="all_news_textview">Lihat Semua</string>
 </resources>

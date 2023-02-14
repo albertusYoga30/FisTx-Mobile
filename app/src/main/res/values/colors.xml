@@ -9,14 +9,22 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="primary">#377FD9</color>
-    <color name="secondary_fade1">#FACE7D</color>
+    <color name="primary_red">#EB5757</color>
     <color name="soft_primary">#EDF3FB</color>
+
+    <color name="secondary_fade1">#FACE7D</color>
     <color name="soft_secondary">#FDF6E8</color>
+
+    <color name="soft_yellow">#FFF1BD</color>
+    <color name="soft_purple">#EFE9F6</color>
+    <color name="soft_orange">#FFE6D0</color>
+    <color name="soft_blue">#D9EEFF</color>
     <color name="red">#EB5757</color>
     <color name="status_bar_color_white">#33333333</color>
     <color name="status_bar_color_blue">#CC377FD9</color>
 
     <color name="gray1">#333333</color>
+    <color name="gray3">#828282</color>
     <color name="gray4">#BDBDBD</color>
     <color name="gray5">#E0E0E0</color>
     <color name="gray6">#F2F2F2</color>

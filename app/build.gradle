@@ -54,6 +54,13 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+
+    // Material Components
+    implementation 'com.google.android.material:material:1.8.0'
+
+    // Coordinator Layout
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
+
     // Navigation Components
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
@@ -77,8 +84,13 @@ dependencies {
     // Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
-    //Jsoup
+    // Jsoup
     implementation('org.jsoup:jsoup:1.15.3')
+
+    // Chart view
+    //implementation "com.androidplot:androidplot-core:1.5.10"
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
 }
 
 kapt {

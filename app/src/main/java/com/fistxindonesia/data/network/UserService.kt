@@ -1,25 +1,21 @@
 package com.fistxindonesia.data.network
 
-import com.fistxindonesia.data.models.*
-import retrofit2.Response
+import com.fistxindonesia.models.user.UpdateUserResponse
+import com.fistxindonesia.models.user.UserDetail
+import okhttp3.RequestBody
 import retrofit2.http.Body
-import retrofit2.http.POST
+import retrofit2.http.GET
+import retrofit2.http.Headers
+import retrofit2.http.PUT
 
 interface UserService {
-    @POST("api/v1/auth/login")
-    suspend fun login(@Body param:LoginRequest): Response<LoginResponse>
 
-    @POST("api/v1/auth/register")
-    suspend fun register(@Body param: RegisterRequest): Response<RegisterResponse>
+    @Headers("@: Auth")
+    @GET("api/v1/breeders/detail")
+    suspend fun getUserDetail() : UserDetail
 
-    @POST("api/v1/auth/validate-otp")
-    suspend fun validate0tp(@Body param: OtpRequest): Response<OtpResponse>
-
-    @POST("api/v1/auth/forgot-password")
-    suspend fun forgotPassword(@Body param: ForgotPasswordData): Response<ForgotPasswordData>
-
-    @POST("api/v1/auth/change-password")
-    suspend fun changePassword(@Body param: ChangePasswordData): Response<String>
-
+    @Headers("@: Auth")
+    @PUT("api/v1/breeders")
+    suspend fun updateUserProfile(@Body param :RequestBody): UpdateUserResponse
 
 }

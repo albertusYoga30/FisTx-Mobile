@@ -1,7 +1,5 @@
 package com.fistxindonesia.ui.auth.resetPassword
 
-import android.content.Context
-import android.content.Context.INPUT_METHOD_SERVICE
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -10,23 +8,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.getSystemService
-import androidx.core.widget.addTextChangedListener
 import androidx.core.widget.doAfterTextChanged
 import androidx.navigation.fragment.findNavController
 import com.fistxindonesia.R
-import com.fistxindonesia.databinding.FragmentForgotPasswordBinding
 import com.fistxindonesia.databinding.FragmentVerificationOtpBinding
-import com.fistxindonesia.viewmodel.AuthViewModel
-import kotlin.math.log
 
 class VerificationOtpFragment : Fragment() {
     private var _binding: FragmentVerificationOtpBinding? = null
     private val binding get() = _binding!!
-
-    private lateinit var authViewModel: AuthViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,7 +43,7 @@ class VerificationOtpFragment : Fragment() {
 
         binding.btnResendOtp.setOnClickListener {
             binding.btnVerification.isEnabled = true
-            validatePin()
+//            validatePin()
             /*do something*/
         }
 

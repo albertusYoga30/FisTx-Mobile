@@ -7,10 +7,6 @@
     android:background="@color/soft_primary"
     tools:context=".ui.profile.ProfileFragment">
 
-    <include
-        android:id="@+id/action_bar"
-        layout="@layout/action_bar_main" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_profile"
         android:layout_width="0dp"
@@ -20,7 +16,7 @@
         android:background="@drawable/bg_rounded_white_radius10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/action_bar">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"

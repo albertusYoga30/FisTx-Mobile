@@ -6,11 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.forum.ForumFragment">
 
-    <include
-        android:id="@+id/action_bar"
-        layout="@layout/action_bar_main" />
-
-
     <TextView
         android:id="@+id/text_notifications"
         android:layout_width="match_parent"

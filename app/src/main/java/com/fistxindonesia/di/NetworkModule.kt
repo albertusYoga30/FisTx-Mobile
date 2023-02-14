@@ -1,6 +1,6 @@
 package com.fistxindonesia.di
 
-import com.fistxindonesia.data.network.UserService
+import com.fistxindonesia.data.network.AuthService
 import com.fistxindonesia.util.Constants.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -46,8 +46,8 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideUserService(retrofit: Retrofit): UserService{
-        return retrofit.create(UserService::class.java)
+    fun provideUserService(retrofit: Retrofit): AuthService{
+        return retrofit.create(AuthService::class.java)
     }
 
 

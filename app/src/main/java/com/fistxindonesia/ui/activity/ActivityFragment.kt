@@ -21,13 +21,11 @@ class ActivityFragment : Fragment() {
         _binding = FragmentActivityBinding.inflate(inflater, container, false)
         actionBarSetup()
 
-
-
         return binding.root
     }
 
     private fun actionBarSetup() {
-        binding.actionBar.label.text = findNavController().currentDestination?.label.toString()
+//        binding.actionBar.label.text = findNavController().currentDestination?.label.toString()
     }
 
     override fun onDestroyView() {

@@ -1,28 +1,358 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment" >
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
 
-    <include
-        android:id="@+id/action_bar"
-        layout="@layout/action_bar_main" />
-
-
-    <TextView
-        android:id="@+id/text_home"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/banner_textview"
+            style="@style/TextStyleSemiBold18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/banner_textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_banner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="14dp"
+            android:contentDescription="Sabar masih belum APinya"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/banner_textview"
+            tools:listitem="@layout/item_banner" />
+
+        <TextView
+            android:id="@+id/service_textview"
+            style="@style/TextStyleRegular14gray1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="54dp"
+            android:text="@string/service_textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerview_banner" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pond_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_rounded_18_yellow"
+            app:layout_constraintEnd_toStartOf="@+id/device"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/service_textview">
+
+            <ImageView
+                android:id="@+id/image_pond_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_pond_profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_pond_profile"
+                style="@style/TextStyleRegular14gray1700"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:layout_marginEnd="39dp"
+                android:text="@string/pond_profile_textview"
+                app:layout_constraintStart_toStartOf="@id/image_pond_profile"
+                app:layout_constraintTop_toBottomOf="@id/image_pond_profile" />
+
+            <TextView
+                android:id="@+id/desc_pond_profile"
+                style="@style/TextStyleRegular10Gray1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="27dp"
+                android:layout_marginBottom="24dp"
+                android:maxLines="2"
+                android:text="@string/pond_profile_desc_textview"
+                android:textAlignment="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/image_pond_profile"
+                app:layout_constraintTop_toBottomOf="@id/title_pond_profile" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/device"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/bg_rounded_18_purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pond_profile"
+            app:layout_constraintTop_toTopOf="@+id/pond_profile">
+
+            <ImageView
+                android:id="@+id/image_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_device"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_device"
+                style="@style/TextStyleRegular14gray1700"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:layout_marginEnd="39dp"
+                android:text="@string/device_textview"
+                app:layout_constraintStart_toStartOf="@id/image_device"
+                app:layout_constraintTop_toBottomOf="@id/image_device" />
+
+            <TextView
+                android:id="@+id/desc_device"
+                style="@style/TextStyleRegular10Gray1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="27dp"
+                android:layout_marginBottom="24dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/device_desc_textview"
+                android:textAlignment="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/image_device"
+                app:layout_constraintTop_toBottomOf="@id/title_device" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/calculator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_rounded_18_orange"
+            app:layout_constraintEnd_toStartOf="@+id/shrimp_price"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@id/pond_profile"
+            app:layout_constraintTop_toBottomOf="@id/pond_profile">
+
+            <ImageView
+                android:id="@+id/image_calculator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_calculator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_calculator"
+                style="@style/TextStyleRegular14gray1700"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:layout_marginEnd="39dp"
+                android:text="@string/calculator_textview"
+                app:layout_constraintStart_toStartOf="@id/image_calculator"
+                app:layout_constraintTop_toBottomOf="@id/image_calculator" />
+
+            <TextView
+                android:id="@+id/desc_calculator"
+                style="@style/TextStyleRegular10Gray1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="24dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/calculator_desc_textview"
+                android:textAlignment="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/image_calculator"
+                app:layout_constraintTop_toBottomOf="@id/title_calculator" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/shrimp_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_rounded_18_blue"
+            app:layout_constraintEnd_toEndOf="@id/device"
+            app:layout_constraintStart_toEndOf="@+id/calculator"
+            app:layout_constraintTop_toTopOf="@id/calculator">
+
+            <ImageView
+                android:id="@+id/image_shrimp_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_shrimp_price"
+                style="@style/TextStyleRegular14gray1700"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:layout_marginEnd="39dp"
+                android:text="@string/shrimp_price_textview"
+                app:layout_constraintStart_toStartOf="@id/image_shrimp_price"
+                app:layout_constraintTop_toBottomOf="@id/image_shrimp_price" />
+
+            <TextView
+                android:id="@+id/desc_shrimp_price"
+                style="@style/TextStyleRegular10Gray1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="24dp"
+                android:maxLines="2"
+                android:text="@string/shrimp_price_desc_textview"
+                android:textAlignment="textStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/image_shrimp_price"
+                app:layout_constraintTop_toBottomOf="@id/title_shrimp_price" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/sparator1"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/soft_primary"
+            app:layout_constraintTop_toBottomOf="@id/calculator" />
+
+        <TextView
+            android:id="@+id/summaryActivities_textview"
+            style="@style/TextStyleRegular14gray1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/summary_activity_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sparator1" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_tabLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_rounded_10_soft_primary"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/summaryActivities_textview">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                style="@style/CustomTabLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabTextAppearance="@style/CustomTabTextStyle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintTop_toBottomOf="@id/container_tabLayout" />
+
+        <View
+            android:id="@+id/sparator2"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/soft_primary"
+            app:layout_constraintTop_toBottomOf="@id/viewPager2" />
+
+        <TextView
+            android:id="@+id/news_textview"
+            style="@style/TextStyleRegular14gray1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/news_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sparator2" />
+
+        <TextView
+            android:id="@+id/news_extends_textview"
+            style="@style/TextStyleSemiBold12Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/all_news_textview"
+            app:layout_constraintEnd_toStartOf="@id/ic_arrow"
+            app:layout_constraintBottom_toBottomOf="@+id/news_textview"
+            app:layout_constraintTop_toTopOf="@+id/news_textview" />
+
+        <ImageView
+            android:id="@+id/ic_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:src="@drawable/ic_right_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/news_extends_textview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/news_extends_textview" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/news_textview" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
