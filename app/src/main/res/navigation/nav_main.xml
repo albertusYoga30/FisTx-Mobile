@@ -9,7 +9,14 @@
         android:id="@+id/navigation_home"
         android:name="com.fistxindonesia.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_deviceFragment"
+            app:destination="@id/deviceFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_pondFragment"
+            app:destination="@id/pondFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_activity"
@@ -55,4 +62,23 @@
         android:name="com.fistxindonesia.ui.profile.ProfileDetailFragment"
         android:label="fragment_profile_detail"
         tools:layout="@layout/fragment_profile_detail" />
+    <fragment
+        android:id="@+id/deviceFragment"
+        android:name="com.fistxindonesia.ui.device.DeviceFragment"
+        android:label="fragment_device"
+        tools:layout="@layout/fragment_device" />
+    <fragment
+        android:id="@+id/pondFragment"
+        android:name="com.fistxindonesia.ui.pond.PondProfileFragment"
+        android:label="fragment_pond"
+        tools:layout="@layout/fragment_pond_profile" >
+        <action
+            android:id="@+id/action_pondFragment_to_addPondFragment"
+            app:destination="@id/addPondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPondFragment"
+        android:name="com.fistxindonesia.ui.pond.CreatePondFragment"
+        android:label="fragment_add_pond"
+        tools:layout="@layout/fragment_create_pond" />
 </navigation>

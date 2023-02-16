@@ -200,7 +200,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/provinsi_textView"
+            android:text="@string/province_textview"
             app:layout_constraintStart_toStartOf="@+id/layout_gender"
             app:layout_constraintTop_toBottomOf="@+id/layout_gender" />
 

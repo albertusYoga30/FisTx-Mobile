@@ -29,6 +29,16 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNavigationView: BottomNavigationView = binding.bottomNavigationView
         navController = findNavController(R.id.navHostFragmentMain)
+        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+
+            val tabMenu = destination.id == R.id.navigation_home
+                    || destination.id == R.id.navigation_activity
+                    || destination.id == R.id.navigation_forum
+                    || destination.id == R.id.navigation_profile
+
+
+        }
+
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home,
@@ -39,6 +49,8 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottomNavigationView.setupWithNavController(navController)
+
+
     }
 
     private fun actionbarSetup() {

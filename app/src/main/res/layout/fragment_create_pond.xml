@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pond.CreatePondFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="18dp">
+
+        <TextView
+            android:id="@+id/land_name_textview"
+            style="@style/TextStyle400Regular12Gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="@string/land_name_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_land_name"
+            style="@style/RegularInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_input_outline_gray"
+            android:hint="@string/hint_land_name_textview"
+            app:layout_constraintTop_toBottomOf="@+id/land_name_textview" />
+
+        <TextView
+            android:id="@+id/wide_land_textview"
+            style="@style/TextStyle400Regular12Gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/wide_land_textview"
+            app:layout_constraintStart_toStartOf="@+id/input_land_name"
+            app:layout_constraintTop_toBottomOf="@+id/input_land_name" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_wide_land"
+            style="@style/RegularInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_input_outline_gray"
+            android:hint="@string/hint_wide_land_textview"
+            app:layout_constraintTop_toBottomOf="@+id/wide_land_textview" />
+
+        <TextView
+            android:id="@+id/land_location_textview"
+            style="@style/TextStyleSemiBold12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/land_location_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_wide_land" />
+
+        <TextView
+            android:id="@+id/provinsi_textView"
+            style="@style/TextStyleRegular12Black3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/province_textview"
+            app:layout_constraintStart_toStartOf="@+id/land_location_textview"
+            app:layout_constraintTop_toBottomOf="@+id/land_location_textview" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_provinsi"
+            style="@style/LayoutInputDropDownStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/provinsi_textView"
+            app:layout_constraintTop_toBottomOf="@+id/provinsi_textView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_provinsi"
+                style="@style/RegularInputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/hint_provinsi"
+                android:imeOptions="actionNext" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/kabupaten_textView"
+            style="@style/TextStyleRegular12Black3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/kota_kabupaten_textView"
+            app:layout_constraintStart_toStartOf="@+id/layout_provinsi"
+            app:layout_constraintTop_toBottomOf="@+id/layout_provinsi" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_kota_kabupaten"
+            style="@style/LayoutInputDropDownStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/kabupaten_textView"
+            app:layout_constraintTop_toBottomOf="@+id/kabupaten_textView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_kota_kabupaten"
+                style="@style/RegularInputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/hint_kota_kabupaten"
+                android:imeOptions="actionNext" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/kecamatan_textView"
+            style="@style/TextStyleRegular12Black3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/kecamatan_textView"
+            app:layout_constraintStart_toStartOf="@+id/layout_kota_kabupaten"
+            app:layout_constraintTop_toBottomOf="@+id/layout_kota_kabupaten" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_kecamatan"
+            style="@style/LayoutInputDropDownStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/kecamatan_textView"
+            app:layout_constraintTop_toBottomOf="@+id/kecamatan_textView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_kecamatan"
+                style="@style/RegularInputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/hint_kecamatan"
+                android:imeOptions="actionNext" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/kelurahan_desa_textView"
+            style="@style/TextStyleRegular12Black3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/kelurahan_desa_textView"
+            app:layout_constraintStart_toStartOf="@+id/layout_kecamatan"
+            app:layout_constraintTop_toBottomOf="@+id/layout_kecamatan" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_kelurahan_desa"
+            style="@style/LayoutInputDropDownStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/kelurahan_desa_textView"
+            app:layout_constraintTop_toBottomOf="@+id/kelurahan_desa_textView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_kelurahan_desa"
+                style="@style/RegularInputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/hint_kelurahan_desa"
+                android:imeOptions="actionNext" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/water_resource_textview"
+            style="@style/TextStyleSemiBold12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/water_resource_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_kelurahan_desa" />
+
+        <CheckBox
+            android:id="@+id/well_checkbox"
+            style="@style/TextStyle400Regular12Gray1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/primary"
+            android:text="@string/well_textview"
+            app:layout_constraintStart_toStartOf="@id/water_resource_textview"
+            app:layout_constraintTop_toBottomOf="@id/water_resource_textview" />
+
+        <CheckBox
+            android:id="@+id/river_checkbox"
+            style="@style/TextStyle400Regular12Gray1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:buttonTint="@color/primary"
+            android:text="@string/river_textview"
+            app:layout_constraintBottom_toBottomOf="@+id/well_checkbox"
+            app:layout_constraintStart_toEndOf="@id/well_checkbox"
+            app:layout_constraintTop_toBottomOf="@+id/water_resource_textview" />
+
+        <CheckBox
+            android:id="@+id/sea_checkbox"
+            style="@style/TextStyle400Regular12Gray1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:buttonTint="@color/primary"
+            android:text="@string/sea_textview"
+            app:layout_constraintBottom_toBottomOf="@+id/river_checkbox"
+            app:layout_constraintStart_toEndOf="@id/river_checkbox"
+            app:layout_constraintTop_toTopOf="@+id/river_checkbox" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save"
+            style="@style/buttonInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/btn_save"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/well_checkbox" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

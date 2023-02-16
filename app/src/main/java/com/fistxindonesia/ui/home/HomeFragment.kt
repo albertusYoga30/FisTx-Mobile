@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.PagerAdapter
 import com.fistxindonesia.adapters.home.BannerAdapter
 import com.fistxindonesia.adapters.home.NewsAdapter
@@ -31,12 +32,18 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-//        actionBarSetup()
-
         summaryActivitiesLayout()
+
         binding.recyclerviewBanner.adapter = BannerAdapter()
         binding.recyclerviewNews.adapter = NewsAdapter()
-//        binding.recyclerviewService.adapter = ServiceAdapter()
+
+        binding.pondProfile.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToPondFragment())
+        }
+
+        binding.device.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToDeviceFragment())
+        }
 
 
         return binding.root

@@ -115,6 +115,19 @@
         <item name="android:background">@drawable/button_input_filled</item>
     </style>
 
+    <style name="buttonAdd" parent="Widget.AppCompat.Button">
+        <item name="android:fontWeight">700</item>
+        <item name="android:lineHeight">22dp</item>
+        <item name="android:paddingVertical">16dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:background">@drawable/bg_btn_input_blue</item>
+    </style>
+
     <style name="buttonInputOutline" parent="Widget.AppCompat.Button">
         <item name="android:textColor">@color/primary</item>
         <item name="android:textAllCaps">false</item>
@@ -161,6 +174,25 @@
         <item name="android:textColor">@color/black3</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
+
+    <style name="TextStyle400Regular12Gray" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:lineHeight">14.63dp</item>
+        <item name="android:textColor">@color/black3</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextStyle400Regular12Gray1" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:lineHeight">20dp</item>
+        <item name="android:textColor">@color/gray1</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
 
     <style name="TextStyleRegular12Gray4" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat</item>
