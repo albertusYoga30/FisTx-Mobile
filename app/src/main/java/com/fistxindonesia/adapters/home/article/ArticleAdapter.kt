@@ -1,14 +1,14 @@
-package com.fistxindonesia.adapters.home
+package com.fistxindonesia.adapters.home.article
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.fistxindonesia.data.local.DataNews.news
-import com.fistxindonesia.databinding.ItemNewsBinding
+import com.fistxindonesia.data.local.DataArticle.articles
+import com.fistxindonesia.databinding.ItemArticleBinding
 
-class NewsAdapter : RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
+class ArticleAdapter : RecyclerView.Adapter<ArticleAdapter.MyViewHolder>() {
 
-    class MyViewHolder(binding: ItemNewsBinding) : RecyclerView.ViewHolder(binding.root) {
+    class MyViewHolder(binding: ItemArticleBinding) : RecyclerView.ViewHolder(binding.root) {
         val image = binding.image
         val title = binding.title
         val date = binding.date
@@ -16,7 +16,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
         companion object {
             fun from(parent: ViewGroup): MyViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ItemNewsBinding.inflate(layoutInflater, parent, false)
+                val binding = ItemArticleBinding.inflate(layoutInflater, parent, false)
                 return MyViewHolder(binding)
             }
         }
@@ -27,13 +27,13 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val item = news[position]
+        val item = articles[position]
         holder.image.setImageResource(item.image)
         holder.title.text = item.title
         holder.date.text = item.date
     }
 
     override fun getItemCount(): Int {
-        return  news.size
+        return  articles.size
     }
 }

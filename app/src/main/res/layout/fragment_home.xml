@@ -99,7 +99,7 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-         <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/device"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -309,7 +309,7 @@
             app:layout_constraintTop_toBottomOf="@id/viewPager2" />
 
         <TextView
-            android:id="@+id/news_textview"
+            android:id="@+id/article_textview"
             style="@style/TextStyleRegular14gray1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -319,29 +319,43 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/sparator2" />
 
-        <TextView
-            android:id="@+id/news_extends_textview"
-            style="@style/TextStyleSemiBold12Blue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/all_news_textview"
-            app:layout_constraintEnd_toStartOf="@id/ic_arrow"
-            app:layout_constraintBottom_toBottomOf="@+id/news_textview"
-            app:layout_constraintTop_toTopOf="@+id/news_textview" />
-
-        <ImageView
-            android:id="@+id/ic_arrow"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/allArticle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="18dp"
-            android:src="@drawable/ic_right_arrow"
-            app:layout_constraintBottom_toBottomOf="@id/news_extends_textview"
+            app:layout_constraintBottom_toBottomOf="@+id/article_textview"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/news_extends_textview" />
+            app:layout_constraintTop_toTopOf="@+id/article_textview">
+
+            <TextView
+                android:id="@+id/article_extends_textview"
+                style="@style/TextStyleSemiBold12Blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="@string/all_news_textview"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:id="@+id/ic_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_right_arrow"
+                app:layout_constraintStart_toEndOf="@id/article_extends_textview"
+                app:layout_constraintBottom_toBottomOf="@id/article_extends_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/article_extends_textview" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview_news"
+            android:id="@+id/recyclerview_articles"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="11dp"
@@ -350,7 +364,7 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/news_textview" />
+            app:layout_constraintTop_toBottomOf="@id/article_textview" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

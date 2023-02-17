@@ -5,11 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import androidx.viewpager.widget.PagerAdapter
 import com.fistxindonesia.adapters.home.BannerAdapter
-import com.fistxindonesia.adapters.home.NewsAdapter
+import com.fistxindonesia.adapters.home.article.ArticleAdapter
 import com.fistxindonesia.adapters.home.SummaryActivitiesAdapter
 import com.fistxindonesia.databinding.FragmentHomeBinding
 import com.fistxindonesia.ui.home.summaryActivities.FeedChartFragment
@@ -24,7 +22,7 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    private val homeViewModel by viewModels<HomeViewModel>()
+//    private val homeViewModel by viewModels<HomeViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,7 +33,7 @@ class HomeFragment : Fragment() {
         summaryActivitiesLayout()
 
         binding.recyclerviewBanner.adapter = BannerAdapter()
-        binding.recyclerviewNews.adapter = NewsAdapter()
+        binding.recyclerviewArticles.adapter = ArticleAdapter()
 
         binding.pondProfile.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToPondFragment())
@@ -47,6 +45,10 @@ class HomeFragment : Fragment() {
 
         binding.calculator.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToCalculatorFragment())
+        }
+
+        binding.allArticle.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToArticlesFragment())
         }
 
 

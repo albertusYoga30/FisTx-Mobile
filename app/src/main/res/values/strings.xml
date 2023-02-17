@@ -173,4 +173,9 @@
     <string name="ammonia_safe_result_textview">Ammonia Aman</string>
     <string name="ammonia_unsafe_result_textview">Ammonia Tidak Aman</string>
     <string name="total_carbon_textview">Jumlah Karbon</string>
+    <string name="hint_search_article">Cari artikel</string>
+    <string name="category_textview">Kategori</string>
+    <string name="dummy_category">Petani</string>
+    <string name="dummy_article_title">Dianggap Bawa keberuntungan, Udang Biru Senilai Rp 2,5 juta ini banyak dicari</string>
+    <string name="dummy_date_article">30 Okt 2020, 20:40 WIB</string>
 </resources>

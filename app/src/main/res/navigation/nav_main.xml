@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_navigation_home_to_calculatorFragment"
             app:destination="@id/calculatorFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_articlesFragment"
+            app:destination="@id/articlesFragment" />
     </fragment>
 
     <fragment
@@ -89,4 +92,9 @@
         android:name="com.fistxindonesia.ui.calculator.CalculatorFragment"
         android:label="fragment_calculator"
         tools:layout="@layout/fragment_calculator" />
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.fistxindonesia.ui.home.articles.ArticlesFragment"
+        android:label="fragment_articles"
+        tools:layout="@layout/fragment_articles" />
 </navigation>

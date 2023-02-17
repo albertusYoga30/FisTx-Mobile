@@ -16,6 +16,14 @@
         <item name="boxBackgroundMode">none</item>
     </style>
 
+    <style name="LayoutSearchGrayStyle" parent="Widget.Design.TextInputLayout">
+        <item name="hintEnabled">false</item>
+        <item name="endIconDrawable">@drawable/ic_search_gray</item>
+        <item name="endIconMode">custom</item>
+        <item name="endIconTint">@color/gray4</item>
+        <item name="boxBackgroundMode">none</item>
+    </style>
+
     <style name="LayoutInputDropDownStyle" parent="Widget.Design.TextInputLayout">
         <item name="hintEnabled">false</item>
         <item name="endIconDrawable">@drawable/ic_bottom_arrow</item>
@@ -34,6 +42,19 @@
         <item name="android:textColorHint">@color/gray4</item>
         <item name="android:letterSpacing">0.02</item>
         <item name="android:paddingVertical">11dp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+    </style>
+
+    <style name="SearchGrayInputStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:inputType">text</item>
+        <item name="android:background">@drawable/bg_input_gray</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColorHint">@color/gray4</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:paddingVertical">18dp</item>
         <item name="android:paddingHorizontal">16dp</item>
     </style>
 
@@ -114,7 +135,6 @@
         <item name="android:gravity">center</item>
     </style>
 
-
     <!-- Button Style -->
     <style name="buttonInput" parent="Widget.AppCompat.Button">
         <item name="android:fontWeight">700</item>
@@ -188,6 +208,15 @@
         <item name="android:letterSpacing">0.02</item>
     </style>
 
+    <style name="TextStyleRegular12" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontWeight">600</item>
+        <item name="lineHeight">18dp</item>
+        <item name="android:textColor">@color/gray1</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
     <style name="TextStyle400Regular12Gray" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat</item>
         <item name="android:textSize">12sp</item>
@@ -212,6 +241,15 @@
         <item name="android:fontWeight">400</item>
         <item name="android:lineHeight">14.63dp</item>
         <item name="android:textColor">@color/gray3</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextStyle700Regular12Gray1" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontWeight">700</item>
+        <item name="android:lineHeight">18dp</item>
+        <item name="android:textColor">@color/gray1</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
 
@@ -248,7 +286,6 @@
         <item name="android:letterSpacing">0.02</item>
     </style>
 
-
     <style name="TextStyleRegular14gray1700" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat</item>
         <item name="android:textSize">14sp</item>
@@ -276,14 +313,7 @@
         <item name="android:letterSpacing">0.02</item>
     </style>
 
-    <style name="TextStyleRegular12" parent="Widget.AppCompat.TextView">
-        <item name="fontFamily">@font/montserrat_semi_bold</item>
-        <item name="android:textSize">12sp</item>
-        <item name="fontWeight">600</item>
-        <item name="lineHeight">18dp</item>
-        <item name="android:textColor">@color/gray1</item>
-        <item name="android:letterSpacing">0.02</item>
-    </style>
+
 
     <style name="TextStyleSemiBold12Red" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat_semi_bold</item>
