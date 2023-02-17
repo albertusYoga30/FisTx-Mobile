@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_rounded_white">
+
+    <ImageView
+        android:id="@+id/success_dialog_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_calculate_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/calculate_result_textView"
+        style="@style/TextStyleSemiBold14Gray2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="102dp"
+        android:layout_marginTop="32dp"
+        android:lineHeight="28sp"
+        android:text="@string/calculate_result_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/success_dialog_imageView" />
+
+    <TextView
+        android:id="@+id/calculate_result_desc_textView"
+        style="@style/TextStyle400Regular12Gray1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/calculate_result_desc_textView"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_result_textView" />
+
+    <TextView
+        android:id="@+id/sodium_bicarbonate_textView"
+        style="@style/TextStyleSemiBold14Gray2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/sodium_bicarbonate_textView"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_result_desc_textView" />
+
+    <TextView
+        android:id="@+id/sodium_bicarbonate_desc_textView"
+        style="@style/TextStyle400Regular12Gray3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/sodium_bicarbonate_desc_textView"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="@+id/sodium_bicarbonate_textView"
+        app:layout_constraintStart_toStartOf="@+id/sodium_bicarbonate_textView"
+        app:layout_constraintTop_toBottomOf="@id/sodium_bicarbonate_textView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sodium_bicarbonate_value_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_rounded_10_soft_primary"
+        app:layout_constraintStart_toStartOf="@id/sodium_bicarbonate_desc_textView"
+        app:layout_constraintTop_toBottomOf="@+id/sodium_bicarbonate_desc_textView">
+
+        <TextView
+            android:id="@+id/sodium_bicarbonate_result"
+            style="@style/TextStyleBold14Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="9dp"
+            android:text="93,8 kg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/calcium_carbonate_textView"
+        style="@style/TextStyleSemiBold14Gray2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/calcium_carbonate_textView"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sodium_bicarbonate_value_layout" />
+
+    <TextView
+        android:id="@+id/calcium_carbonate_desc_textView"
+        style="@style/TextStyle400Regular12Gray3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/calcium_carbonate_desc_textview"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="@+id/calcium_carbonate_textView"
+        app:layout_constraintStart_toStartOf="@+id/calcium_carbonate_textView"
+        app:layout_constraintTop_toBottomOf="@id/calcium_carbonate_textView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/calcium_carbonate_value_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_rounded_10_soft_primary"
+        app:layout_constraintStart_toStartOf="@id/calcium_carbonate_desc_textView"
+        app:layout_constraintTop_toBottomOf="@+id/calcium_carbonate_desc_textView">
+
+        <TextView
+            android:id="@+id/calcium_carbonate_result"
+            style="@style/TextStyleBold14Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="9dp"
+            android:text="187,6 kg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/calcium_hydroxide_textview"
+        style="@style/TextStyleSemiBold14Gray2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/calcium_hydroxide_textview"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calcium_carbonate_value_layout" />
+
+    <TextView
+        android:id="@+id/calcium_hydroxide_desc_textview"
+        style="@style/TextStyle400Regular12Gray3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/calcium_hydroxide_desc_textview"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="@+id/calcium_hydroxide_textview"
+        app:layout_constraintStart_toStartOf="@+id/calcium_hydroxide_textview"
+        app:layout_constraintTop_toBottomOf="@id/calcium_hydroxide_textview" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/calcium_hydroxide_value_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_rounded_10_soft_primary"
+        app:layout_constraintStart_toStartOf="@id/calcium_hydroxide_desc_textview"
+        app:layout_constraintTop_toBottomOf="@+id/calcium_hydroxide_desc_textview">
+
+        <TextView
+            android:id="@+id/calcium_hydroxide_result"
+            style="@style/TextStyleBold14Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="9dp"
+            android:text="337,68 kg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_close"
+        style="@style/buttonInputOutline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="30dp"
+        android:layout_marginBottom="69dp"
+        android:layout_marginHorizontal="75dp"
+        android:text="@string/close_text_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcium_hydroxide_value_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

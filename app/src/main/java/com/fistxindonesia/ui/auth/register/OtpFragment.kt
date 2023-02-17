@@ -24,7 +24,7 @@ class OtpFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentOtpBinding.inflate(inflater, container, false)
 
         statusBarSetup()

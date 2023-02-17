@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="18dp"
+    tools:context=".ui.calculator.calculatorViewPage.AlkalinityFragment">
+
+    <TextView
+        android:id="@+id/calculator_alkalinity_textview"
+        style="@style/TextStyleSemiBold12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/calculator_alkalinity_textview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/calculator_alkalinity_desc_textview"
+        style="@style/TextStyleRegular10Gray3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/calculator_alkalinity_desc_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/calculator_alkalinity_textview"
+        app:layout_constraintTop_toBottomOf="@+id/calculator_alkalinity_textview" />
+
+    <TextView
+        android:id="@+id/current_alkalinity_textview"
+        style="@style/TextStyleRegular12Black3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/current_alkalinity_textview"
+        app:layout_constraintStart_toStartOf="@+id/calculator_alkalinity_desc_textview"
+        app:layout_constraintTop_toBottomOf="@+id/calculator_alkalinity_desc_textview" />
+
+    <EditText
+        android:id="@+id/input_current_alkalinity"
+        style="@style/NumberInputStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:hint="@string/hint_current_alkalinity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/current_alkalinity_textview"
+        app:layout_constraintTop_toBottomOf="@+id/current_alkalinity_textview" />
+
+    <TextView
+        android:id="@+id/desired_alkalinity_textview"
+        style="@style/TextStyleRegular12Black3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/desired_alkalinity_textview"
+        app:layout_constraintStart_toStartOf="@+id/input_current_alkalinity"
+        app:layout_constraintTop_toBottomOf="@+id/input_current_alkalinity" />
+
+    <EditText
+        android:id="@+id/input_desired_alkalinity"
+        style="@style/NumberInputStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:hint="@string/hint_desired_alkalinity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/desired_alkalinity_textview"
+        app:layout_constraintTop_toBottomOf="@+id/desired_alkalinity_textview" />
+
+    <TextView
+        android:id="@+id/alkalinity_volume_textview"
+        style="@style/TextStyleRegular12Black3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/volume_mol_textview"
+        app:layout_constraintStart_toStartOf="@+id/input_desired_alkalinity"
+        app:layout_constraintTop_toBottomOf="@+id/input_desired_alkalinity" />
+
+    <EditText
+        android:id="@+id/input_volume"
+        style="@style/NumberInputStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:hint="@string/hint_volume_mol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/alkalinity_volume_textview"
+        app:layout_constraintTop_toBottomOf="@+id/alkalinity_volume_textview" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_calculate"
+        style="@style/buttonInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/btn_calculate_textview"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/input_volume"
+        app:layout_constraintStart_toStartOf="@+id/input_volume"
+        app:layout_constraintTop_toBottomOf="@+id/input_volume"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

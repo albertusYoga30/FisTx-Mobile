@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_rounded_white">
+
+    <ImageView
+        android:id="@+id/calculate_result_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_calculate_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/calculate_result_textView"
+        style="@style/TextStyleSemiBold14Gray2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="102dp"
+        android:layout_marginTop="32dp"
+        android:lineHeight="28sp"
+        android:text="@string/calculate_result_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_result_imageView" />
+
+    <TextView
+        android:id="@+id/calculate_result_desc_textView"
+        style="@style/TextStyle400Regular12Gray1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="49dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/calculate_result_desc_textview"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calculate_result_textView" />
+
+    <TextView
+        android:id="@+id/total_carbon_textView"
+        style="@style/TextStyleSemiBold12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/total_carbon_textview"
+        app:layout_constraintEnd_toEndOf="@+id/calculate_result_desc_textView"
+        app:layout_constraintStart_toStartOf="@+id/calculate_result_desc_textView"
+        app:layout_constraintTop_toBottomOf="@id/calculate_result_desc_textView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/carbon_value_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="49dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bg_rounded_10_soft_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_carbon_textView">
+
+        <TextView
+            android:id="@+id/total_carbon_result"
+            style="@style/TextStyleBold14Blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="9dp"
+            android:text="4275 gr/L"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_close"
+        style="@style/buttonInputOutline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="75dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/close_text_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carbon_value_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,11 +19,16 @@
     <color name="soft_purple">#EFE9F6</color>
     <color name="soft_orange">#FFE6D0</color>
     <color name="soft_blue">#D9EEFF</color>
+
     <color name="red">#EB5757</color>
+
+    <color name="green2">#27AE60</color>
+
     <color name="status_bar_color_white">#33333333</color>
     <color name="status_bar_color_blue">#CC377FD9</color>
 
     <color name="gray1">#333333</color>
+    <color name="gray2">#4F4F4F</color>
     <color name="gray3">#828282</color>
     <color name="gray4">#BDBDBD</color>
     <color name="gray5">#E0E0E0</color>

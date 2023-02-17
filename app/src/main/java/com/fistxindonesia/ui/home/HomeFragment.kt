@@ -45,6 +45,10 @@ class HomeFragment : Fragment() {
             findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToDeviceFragment())
         }
 
+        binding.calculator.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToCalculatorFragment())
+        }
+
 
         return binding.root
     }

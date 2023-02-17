@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="18dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.calculator.calculatorViewPage.AmmoniaFragment">
+
+    <TextView
+        android:id="@+id/calculator_ammonia_textview"
+        style="@style/TextStyleSemiBold12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/calculator_ammonia_textview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/calculator_ammonia_desc_textview"
+        style="@style/TextStyleRegular10Gray3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/calculator_ammonia_desc_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/calculator_ammonia_textview"
+        app:layout_constraintTop_toBottomOf="@+id/calculator_ammonia_textview" />
+
+    <TextView
+        android:id="@+id/total_ammonia_nitrogen_textview"
+        style="@style/TextStyleRegular12Black3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/total_ammonia_nitrogen_textview"
+        app:layout_constraintStart_toStartOf="@+id/calculator_ammonia_desc_textview"
+        app:layout_constraintTop_toBottomOf="@+id/calculator_ammonia_desc_textview" />
+
+    <EditText
+        android:id="@+id/input_total_ammonia_nitrogen"
+        style="@style/NumberInputStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:hint="@string/hint_current_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/total_ammonia_nitrogen_textview"
+        app:layout_constraintTop_toBottomOf="@+id/total_ammonia_nitrogen_textview" />
+
+    <TextView
+        android:id="@+id/temperature_textview"
+        style="@style/TextStyleRegular12Black3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/temperature_textview"
+        app:layout_constraintStart_toStartOf="@+id/input_total_ammonia_nitrogen"
+        app:layout_constraintTop_toBottomOf="@+id/input_total_ammonia_nitrogen" />
+
+    <EditText
+        android:id="@+id/input_temperature"
+        style="@style/NumberInputStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:hint="@string/hint_temperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/temperature_textview"
+        app:layout_constraintTop_toBottomOf="@+id/temperature_textview" />
+
+    <TextView
+        android:id="@+id/measured_ph_textview"
+        style="@style/TextStyleRegular12Black3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/measured_pH_textview"
+        app:layout_constraintStart_toStartOf="@+id/input_temperature"
+        app:layout_constraintTop_toBottomOf="@+id/input_temperature" />
+
+    <EditText
+        android:id="@+id/input_measured_ph"
+        style="@style/NumberInputStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:hint="@string/hint_measured_ph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/measured_ph_textview"
+        app:layout_constraintTop_toBottomOf="@+id/measured_ph_textview" />
+
+    <TextView
+        android:id="@+id/salinity_textview"
+        style="@style/TextStyleRegular12Black3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/salinity_textview"
+        app:layout_constraintStart_toStartOf="@+id/input_measured_ph"
+        app:layout_constraintTop_toBottomOf="@+id/input_measured_ph" />
+
+    <EditText
+        android:id="@+id/input_salinity"
+        style="@style/NumberInputStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:hint="@string/hint_salinity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/salinity_textview"
+        app:layout_constraintTop_toBottomOf="@+id/salinity_textview" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_calculate"
+        style="@style/buttonInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/btn_calculate_textview"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/input_salinity"
+        app:layout_constraintStart_toStartOf="@+id/input_salinity"
+        app:layout_constraintTop_toBottomOf="@+id/input_salinity"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_navigation_home_to_pondFragment"
             app:destination="@id/pondFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_calculatorFragment"
+            app:destination="@id/calculatorFragment" />
     </fragment>
 
     <fragment
@@ -73,7 +76,7 @@
         android:label="fragment_pond"
         tools:layout="@layout/fragment_pond_profile" >
         <action
-            android:id="@+id/action_pondFragment_to_addPondFragment"
+            android:id="@+id/action_pondProfileFragment_to_createPondFragment"
             app:destination="@id/addPondFragment" />
     </fragment>
     <fragment
@@ -81,4 +84,9 @@
         android:name="com.fistxindonesia.ui.pond.CreatePondFragment"
         android:label="fragment_add_pond"
         tools:layout="@layout/fragment_create_pond" />
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="com.fistxindonesia.ui.calculator.CalculatorFragment"
+        android:label="fragment_calculator"
+        tools:layout="@layout/fragment_calculator" />
 </navigation>
