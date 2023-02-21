@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:paddingHorizontal="18dp"
     tools:context=".ui.home.articles.ArticlesFragment">
 
@@ -32,10 +33,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
+        android:layout_marginEnd="11dp"
         android:background="@drawable/bg_input_outline_gray"
         android:paddingHorizontal="16dp"
         android:paddingVertical="18dp"
-        android:layout_marginEnd="11dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_category2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,11 +46,11 @@
             android:id="@+id/category1"
             style="@style/TextStyleRegular12Black"
             android:layout_width="0dp"
-            android:layout_marginEnd="10dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:text="@string/category_textview"
-            app:layout_constraintEnd_toStartOf="@+id/ic_category1"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ic_category1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,11 +83,11 @@
             android:id="@+id/category2"
             style="@style/TextStyleRegular12Black"
             android:layout_width="0dp"
-            android:layout_marginEnd="10dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
             android:text="@string/dummy_category"
-            app:layout_constraintEnd_toStartOf="@+id/ic_category2"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ic_category2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -106,11 +107,11 @@
         android:id="@+id/recyclerview_articles"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:paddingVertical="14dp"
         android:orientation="vertical"
+        android:paddingVertical="14dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@+id/btn_category1"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_category1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

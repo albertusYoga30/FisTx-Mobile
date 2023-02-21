@@ -47,6 +47,10 @@ class HomeFragment : Fragment() {
             findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToCalculatorFragment())
         }
 
+        binding.shrimpPrice.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToShrimpPriceFragment())
+        }
+
         binding.allArticle.setOnClickListener {
             findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToArticlesFragment())
         }

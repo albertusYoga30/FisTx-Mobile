@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_navigation_home_to_articlesFragment"
             app:destination="@id/articlesFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_shrimpPriceFragment"
+            app:destination="@id/shrimpPriceFragment" />
     </fragment>
 
     <fragment
@@ -97,4 +100,24 @@
         android:name="com.fistxindonesia.ui.home.articles.ArticlesFragment"
         android:label="fragment_articles"
         tools:layout="@layout/fragment_articles" />
+    <fragment
+        android:id="@+id/shrimpPriceFragment"
+        android:name="com.fistxindonesia.ui.shrimpPrice.ShrimpPriceFragment"
+        android:label="fragment_shrimp_price"
+        tools:layout="@layout/fragment_shrimp_price" >
+        <action
+            android:id="@+id/action_shrimpPriceFragment_to_filterBottomSheetFragment"
+            app:destination="@id/filterBottomSheetFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/filterBottomSheetFragment"
+        android:name="com.fistxindonesia.ui.shrimpPrice.bottomsheet.FilterBottomSheetFragment"
+        android:label="fragment_filter_bottom_sheet"
+        tools:layout="@layout/fragment_filter_bottom_sheet" >
+        <action
+            android:id="@+id/action_filterBottomSheetFragment_to_shrimpPriceFragment"
+            app:destination="@id/shrimpPriceFragment"
+            app:popUpTo="@id/shrimpPriceFragment"
+            app:popUpToInclusive="true"/>
+    </dialog>
 </navigation>

@@ -178,4 +178,23 @@
     <string name="dummy_category">Petani</string>
     <string name="dummy_article_title">Dianggap Bawa keberuntungan, Udang Biru Senilai Rp 2,5 juta ini banyak dicari</string>
     <string name="dummy_date_article">30 Okt 2020, 20:40 WIB</string>
+    <string name="location_textview">Lokasi</string>
+    <string name="hint_search_location">Cari Lokasi</string>
+    <string name="contact_us_textview">Hubungi Kami</string>
+    <string name="filter_textview">Filter</string>
+    <string name="empty_price_textview">Belum Ada Harga udang</string>
+    <string name="empty_price_desc_textview">Maaf saat ini belum ada update terbaru harga udang. Silahkan kembali lagi nanti atau ubah lokasinya.</string>
+    <string name="refresh_page_textview">Segarkan Halaman</string>
+    <string name="shrimp_100_textview">Ukuran 100</string>
+    <string name="shrimp_70_textview">Ukuran 70</string>
+    <string name="shrimp_40_textview">Ukuran 40</string>
+    <string name="all_size_shrimp_textview">Semua Ukuran Udang</string>
+    <string name="content_filter_textview">Filter Konten</string>
+    <string name="filter_by_textview">Urutkan berdasarkan</string>
+    <string name="filter_latest_textview">Terbaru</string>
+    <string name="filter_cheapest_textview">Termurah</string>
+    <string name="filter_most_expensive_textview">Termahal</string>
+    <string name="filter_by_size_textview">Urutkan berdasarakan ukuran</string>
+    <string name="all_textview">Semua</string>
+    <string name="fiter_button_textview">Terapkan</string>
 </resources>
