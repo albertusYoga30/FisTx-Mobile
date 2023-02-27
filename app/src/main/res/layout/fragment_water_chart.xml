@@ -132,7 +132,7 @@
         app:layout_constraintTop_toBottomOf="@+id/layout_set_chart"/>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/change_chart"
         style="@style/TextStyleSemiBold12Blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

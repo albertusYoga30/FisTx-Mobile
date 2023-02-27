@@ -42,14 +42,14 @@
         android:id="@+id/content_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/contact_button"
         app:layout_constraintTop_toBottomOf="@id/search_location_layout">
 
         <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/chart"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="210dp"
             android:layout_marginStart="11dp"
             android:layout_marginTop="14dp"
             app:layout_constraintTop_toTopOf="parent" />
@@ -79,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="@string/shrimp_100_textview"
+                android:text="@string/shrimp_size_100"
                 app:layout_constraintBottom_toBottomOf="@+id/dot_blue_imageview"
                 app:layout_constraintStart_toEndOf="@+id/dot_blue_imageview"
                 app:layout_constraintTop_toTopOf="@+id/dot_blue_imageview" />
@@ -149,7 +149,9 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview_shrimp_price"
             android:layout_width="match_parent"
+            android:layout_marginHorizontal="18dp"
             android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_marginTop="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/all_size_shrimp_textview" />
@@ -162,7 +164,7 @@
         android:id="@+id/content_empty_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:visibility="visible"
+        android:visibility="gone"
         android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/contact_button"
         app:layout_constraintTop_toBottomOf="@+id/search_location_layout">

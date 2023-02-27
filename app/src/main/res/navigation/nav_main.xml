@@ -25,6 +25,12 @@
         <action
             android:id="@+id/action_navigation_home_to_shrimpPriceFragment"
             app:destination="@id/shrimpPriceFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_periodFragment"
+            app:destination="@id/periodFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_chartListDialogFragment"
+            app:destination="@id/chartListDialogFragment" />
     </fragment>
 
     <fragment
@@ -108,8 +114,11 @@
         <action
             android:id="@+id/action_shrimpPriceFragment_to_filterBottomSheetFragment"
             app:destination="@id/filterBottomSheetFragment" />
+        <action
+            android:id="@+id/action_shrimpPriceFragment_to_detailShrimpPriceFragment"
+            app:destination="@id/detailShrimpPriceFragment" />
     </fragment>
-    <dialog
+     <dialog
         android:id="@+id/filterBottomSheetFragment"
         android:name="com.fistxindonesia.ui.shrimpPrice.bottomsheet.FilterBottomSheetFragment"
         android:label="fragment_filter_bottom_sheet"
@@ -120,4 +129,25 @@
             app:popUpTo="@id/shrimpPriceFragment"
             app:popUpToInclusive="true"/>
     </dialog>
+    <fragment
+        android:id="@+id/detailShrimpPriceFragment"
+        android:name="com.fistxindonesia.ui.shrimpPrice.DetailShrimpPriceFragment"
+        android:label="fragment_detail_shrimp_price"
+        tools:layout="@layout/fragment_detail_shrimp_price" />
+    <dialog
+        android:id="@+id/periodFragment"
+        android:name="com.fistxindonesia.ui.home.bottomsheet.PeriodDialogFragment"
+        android:label="fragment_period"
+        tools:layout="@layout/fragment_period" >
+        <action
+            android:id="@+id/action_periodFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/chartListDialogFragment"
+        android:name="com.fistxindonesia.ui.home.bottomsheet.ChartListDialogFragment"
+        android:label="fragment_chart_list_dialog"
+        tools:layout="@layout/fragment_chart_list_dialog" />
 </navigation>

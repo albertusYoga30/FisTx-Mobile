@@ -132,7 +132,7 @@
         app:layout_constraintTop_toBottomOf="@+id/layout_set_chart"/>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/change_chart"
         style="@style/TextStyleSemiBold10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -148,9 +148,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="6dp"
         android:src="@drawable/ic_dot_yellow"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
+        app:layout_constraintBottom_toBottomOf="@+id/change_chart"
+        app:layout_constraintEnd_toStartOf="@+id/change_chart"
+        app:layout_constraintTop_toTopOf="@+id/change_chart" />
 
 
     <com.github.mikephil.charting.charts.LineChart

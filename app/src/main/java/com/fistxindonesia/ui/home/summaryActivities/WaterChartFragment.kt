@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.fistxindonesia.R
 import com.fistxindonesia.databinding.FragmentFeedChartBinding
 import com.fistxindonesia.databinding.FragmentWaterChartBinding
@@ -26,6 +27,14 @@ class WaterChartFragment : Fragment() {
         _binding = FragmentWaterChartBinding.inflate(inflater, container, false)
 
         initChart()
+
+        binding.changeChart.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_home_to_chartListDialogFragment)
+        }
+
+        binding.chooseDate.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_home_to_periodFragment)
+        }
 
         return binding.root
     }

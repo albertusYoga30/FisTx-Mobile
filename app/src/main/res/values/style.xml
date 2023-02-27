@@ -229,6 +229,16 @@
         <item name="android:background">@drawable/bg_rounded_outline_blue</item>
     </style>
 
+    <style name="ButtonCallStyle" parent="Widget.AppCompat.Button">
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textAppearance">@style/TextStyleSemiBold12Blue</item>
+        <item name="android:paddingHorizontal">18dp</item>
+        <item name="android:paddingVertical">10dp</item>
+        <item name="android:drawableStart">@drawable/ic_whatsapp_blue</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@drawable/bg_rounded_outline_8</item>
+    </style>
+
     <style name="RadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:textColor">@color/gray1</item>
         <item name="android:textSize">14sp</item>
@@ -331,6 +341,7 @@
     <style name="TextStyleRegular14" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:lineHeight">22dp</item>
         <item name="android:textColor">@color/gray1</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
@@ -394,7 +405,7 @@
         <item name="android:textSize">14sp</item>
         <item name="fontWeight">600</item>
         <item name="lineHeight">22dp</item>
-        <item name="android:textColor">@color/gray2</item>
+        <item name="android:textColor">@color/gray1</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
 
@@ -404,6 +415,15 @@
         <item name="fontWeight">600</item>
         <item name="lineHeight">22dp</item>
         <item name="android:textColor">@color/gray2</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="TextStyleSemiBold14Blue" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_semi_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontWeight">600</item>
+        <item name="android:lineHeight">22dp</item>
+        <item name="android:textColor">@color/primary</item>
         <item name="android:letterSpacing">0.02</item>
     </style>
 

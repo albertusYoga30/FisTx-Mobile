@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.fistxindonesia.R
 import com.fistxindonesia.databinding.FragmentFeedChartBinding
 import com.github.mikephil.charting.components.XAxis
@@ -27,6 +28,10 @@ class FeedChartFragment : Fragment() {
         _binding = FragmentFeedChartBinding.inflate(inflater, container, false)
 
         initChart()
+
+        binding.chooseDate.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_home_to_periodFragment)
+        }
 
         return binding.root
     }

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.fistxindonesia.R
 import com.fistxindonesia.databinding.FragmentSamplingChartBinding
 import com.github.mikephil.charting.components.XAxis
@@ -29,6 +30,10 @@ class SamplingChartFragment : Fragment() {
 
 //        samplingChartView()
         initChart()
+
+        binding.chooseDate.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_home_to_periodFragment)
+        }
 
         return binding.root
     }

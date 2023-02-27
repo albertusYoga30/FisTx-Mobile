@@ -185,7 +185,7 @@
     <string name="empty_price_textview">Belum Ada Harga udang</string>
     <string name="empty_price_desc_textview">Maaf saat ini belum ada update terbaru harga udang. Silahkan kembali lagi nanti atau ubah lokasinya.</string>
     <string name="refresh_page_textview">Segarkan Halaman</string>
-    <string name="shrimp_100_textview">Ukuran 100</string>
+    <string name="shrimp_size_100">Ukuran 100</string>
     <string name="shrimp_70_textview">Ukuran 70</string>
     <string name="shrimp_40_textview">Ukuran 40</string>
     <string name="all_size_shrimp_textview">Semua Ukuran Udang</string>
@@ -197,4 +197,25 @@
     <string name="filter_by_size_textview">Urutkan berdasarakan ukuran</string>
     <string name="all_textview">Semua</string>
     <string name="fiter_button_textview">Terapkan</string>
+    <string name="location_mark_textview">Lokasi :</string>
+    <string name="dummy_location1">Sleman, D.I Yogyakarta</string>
+    <string name="contact_textview">Kontak</string>
+    <string name="dummy_contact1">Haji Budi</string>
+    <string name="dummy_contact_number1">+62857889990666</string>
+    <string name="call_btn_textview">Hubungi</string>
+    <string name="price_trend_textview">Perkembangan Harga Ukuran (100)</string>
+    <string name="note_textview">Catatan</string>
+    <string name="dummy_note_textview">Ada perbedaan harga di size 30-45, 45,01-49,99 dan 50-150. Harga berlaku untuk biomass udang 1 ton Apabila biomass udang lebih dari 10 ton akan berbeda harga.</string>
+    <string name="dummy_price1">Rp. 78.000</string>
+    <string name="dummy_shrimp_size1">Harga Ukuran 20</string>
+    <string name="dummy_author_postPrice1">18 Desember 2020, oleh Haji Budi</string>
+    <string name="choose_period_textview">Pilih Periode</string>
+    <string name="dummy_year1">2023</string>
+    <string name="dummy_month1">Januari</string>
+    <string name="choose_chart_textview">Pilih Grafik yang Akan Dilihat</string>
+    <string name="daily_ph_textview">pH Harian</string>
+    <string name="chart_water_temp_textview">Suhu Air</string>
+    <string name="chart_dissolved_oxygen_textview">Oksigen Terlarut (DO/ppm)</string>
+    <string name="chart_Salinity_textview">Salinitas (Kadar Garam/ppt</string>
+    <string name="chart_orp_textview">ORP</string>
 </resources>
